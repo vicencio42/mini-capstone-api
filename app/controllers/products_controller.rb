@@ -36,6 +36,12 @@ def update
 
 end
 
+def destroy
+  product_id = params["id"]
+  product = Product.find(product_id)
+  product.destroy
+  render json: {message: "Product has been destroyed!!!"}
+end
 
 end
 
