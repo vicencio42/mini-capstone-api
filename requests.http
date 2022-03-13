@@ -1,0 +1,26 @@
+### Products Index
+GET http://localhost:3000/products
+
+### Producst Show
+GET http://localhost:3000/products/1
+
+### Products Create
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Switch",
+  "price": 300,
+  "image_url": "No Image",
+  "description": "Handheld gaming console."
+}
+
+### Products Update
+
+PATCH http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+  "price":1000
+}
