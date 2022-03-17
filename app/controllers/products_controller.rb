@@ -17,8 +17,11 @@ def create
     image_url: params["image_url"], 
     description: params["description"]
   )
-  product.save
-  render json: product
+  if product.save #happy path
+    render json: product
+  else #sad path
+    render json: {error_message: product.errors.full_messages}, status: 422
+  end
 end
 
 def update
@@ -30,8 +33,11 @@ def update
   product.image_url = params["image_url"] || product.image_url
   product.description = params["description"] || product.description
 
-  product.save
-  render json: product
+  if product.save #happy path
+    render json: product
+  else #sad path
+    render json: {error_message: product.errors.full_messages}, status: 422
+  end
 end
 
 def destroy
