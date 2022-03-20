@@ -28,3 +28,6 @@ Content-Type: application/json
 ### Product Destroy
 
 DELETE http://localhost:3000/products
+
+### Suppliers Index
+GET http://localhost:3000/suppliers
