@@ -8,5 +8,8 @@ Rails.application.routes.draw do
 
 #suppliers
   get "/suppliers" => "suppliers#index"
+
+# users
+  post "/users" => "users#create"
   
 end
