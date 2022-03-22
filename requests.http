@@ -1,5 +1,7 @@
 ### Products Index
 GET http://localhost:3000/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDc5OTYyNTN9.0DPIneekf44Ueu_RGL26R_2uOK48oXIPLQPk4iDM70g
+
 
 ### Producst Show
 GET http://localhost:3000/products/3
