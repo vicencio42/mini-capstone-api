@@ -31,3 +31,23 @@ DELETE http://localhost:3000/products
 
 ### Suppliers Index
 GET http://localhost:3000/suppliers
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Test name2",
+  "email": "test2@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "test2@test.com",
+  "password": "password"
+}
