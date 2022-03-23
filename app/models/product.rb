@@ -1,5 +1,4 @@
 class Product < ApplicationRecord
-
   validates :name, presence: true, uniqueness: true
   validates :price, presence: true, numericality: { greater_than: 0 }
   validates :description, presence: true, length: { in: 10..500 }
@@ -7,13 +6,14 @@ class Product < ApplicationRecord
   belongs_to :supplier
   has_many :images
   has_many :orders
-  
+  has_many :category_products
+
   def is_discounted?
     if price < 10
-    return true
-   else
-    return false   
-   end
+      return true
+    else
+      return false
+    end
   end
 
   def tax
@@ -25,5 +25,4 @@ class Product < ApplicationRecord
     total = tax + price
     return total
   end
-
 end
