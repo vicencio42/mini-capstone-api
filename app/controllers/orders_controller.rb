@@ -6,8 +6,9 @@ class OrdersController < ApplicationController
   end
 
   def create
+    pp current_user
     order = Order.new(
-      user_id: params["user_id"],
+      user_id: current_user.id,
       product_id: params["product_id"],
       quantity: params["quantity"],
       subtotal: params["subtotal"],

@@ -57,6 +57,7 @@ Content-Type: application/json
 ### Orders Create
 POST http://localhost:3000/orders
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgwODM3NTF9.WO82P34Owbx4Zo_1MMXoqd5FfOW9LZgTbvEwISv1W6k
 
 {
   "user_id": 2,
