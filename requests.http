@@ -1,6 +1,8 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDc5OTYyNTN9.0DPIneekf44Ueu_RGL26R_2uOK48oXIPLQPk4iDM70g
+
 ### Products Index
 GET http://localhost:3000/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDc5OTYyNTN9.0DPIneekf44Ueu_RGL26R_2uOK48oXIPLQPk4iDM70g
+Authorization: Bearer {{jwt}}
 
 
 ### Producst Show
@@ -54,23 +56,24 @@ Content-Type: application/json
   "password": "password"
 }
 
+### Orders Index
+GET http://localhost:3000/orders
+Authorization: Bearer {{jwt}}
+
 ### Orders Create
 POST http://localhost:3000/orders
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgwODM3NTF9.WO82P34Owbx4Zo_1MMXoqd5FfOW9LZgTbvEwISv1W6k
+
 
 {
-  "user_id": 2,
   "product_id": 1,
-  "quantity": 1,
-  "subtotal": 5,
-  "tax": 2,
-  "total": 7
+  "quantity": 1
 
 }
 
 ### Orders Show
 GET http://localhost:3000/orders/1
+Authorization: Bearer {{jwt}}
 
-### Orders Index
-GET http://localhost:3000/orders
+
