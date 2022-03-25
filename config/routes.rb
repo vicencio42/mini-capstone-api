@@ -1,24 +1,25 @@
 Rails.application.routes.draw do
-#products
+  #products
   get "/products" => "products#index"
   post "/products" => "products#create"
   get "/products/:id" => "products#show"
   patch "/products/:id" => "products#update"
   delete "/products/:id" => "products#destroy"
 
-#suppliers
+  #suppliers
   get "/suppliers" => "suppliers#index"
 
-# users
+  # users
   post "/users" => "users#create"
 
-#sessions
+  #sessions
   post "/sessions" => "sessions#create"
 
-#orders
+  #orders
   get "/orders" => "orders#index"
   post "/orders" => "orders#create"
   get "/orders/:id" => "orders#show"
-  
-  
+
+  #carted producs
+  post "/carted_products" => "carted_products#create"
 end

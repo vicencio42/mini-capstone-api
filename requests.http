@@ -77,3 +77,5 @@ GET http://localhost:3000/orders/1
 Authorization: Bearer {{jwt}}
 
 
+### Carted Products Create
+POST http://localhost:3000/carted_products
