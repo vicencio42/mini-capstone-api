@@ -29,6 +29,7 @@ class OrdersController < ApplicationController
       total: calculated_total,
     )
     if order.save #happy path
+      carted_products.update_all(status: "purchased", order_id: order.id)
       render json: order.as_json
     else
       render json: { error_message: product.errors.full_messages }, status: 422
