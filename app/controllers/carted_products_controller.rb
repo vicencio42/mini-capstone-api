@@ -24,9 +24,9 @@ class CartedProductsController < ApplicationController
     carted_product = CartedProduct.find(params[:id])
     carted_product.status = "removed"
     if carted_product.save
-      render json: { status: "Carted product remove!" }
+      render json: { status: "Carted product removed!" }
     else
-      render json: { status: "Oh no, something went wrong" }
+      render json: { status: "Oh no, something went wrong!" }
     end
   end
 end
