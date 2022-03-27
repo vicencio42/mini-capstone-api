@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDc5OTYyNTN9.0DPIneekf44Ueu_RGL26R_2uOK48oXIPLQPk4iDM70g
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDg0MzA1Mjl9.tEUhXvTUBcMFLDsuBmsDzPMwfNC5CfZ8Lk_lqO7wo44
 
 ### Products Index
 GET http://localhost:3000/products
@@ -41,8 +41,8 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "Test name2",
-  "email": "test2@test.com",
+  "name": "Test name4",
+  "email": "test4@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -52,7 +52,7 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "test2@test.com",
+  "email": "test@test.com",
   "password": "password"
 }
 
@@ -79,12 +79,18 @@ Authorization: Bearer {{jwt}}
 
 ### Carted Products Create
 POST http://localhost:3000/carted_products
-Authorization: Bearer {{jwt}}
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
 
 {
+  "user_id": 1,
   "product_id": 1,
   "quantity": 1,
-  "status": "" ,
+  "status": "carted" ,
   "order_id": 1
 }
+
+### Carted Products Index
+GET http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}
