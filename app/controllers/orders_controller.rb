@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
 
     carted_products = current_user.carted_products.where(status: "carted")
 
-    calculated_total = 0
+    calculated_subtotal = 0
     carted_products.each do |carted_product|
       calculated_subtotal += carted_product.quantity * carted_product.product.price
     end

@@ -85,8 +85,8 @@ Authorization: Bearer {{jwt}}
 
 {
   "user_id": 1,
-  "product_id": 1,
-  "quantity": 1,
+  "product_id": 2,
+  "quantity": 5,
   "status": "carted" ,
   "order_id": 1
 }
