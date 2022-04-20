@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDg0MzA1Mjl9.tEUhXvTUBcMFLDsuBmsDzPMwfNC5CfZ8Lk_lqO7wo44
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA1ODQ2NTl9.BtRLNAlqxkKUBR0YCFtHK4dCRVJ5dqYdaHouuulszSo
 
 ### Products Index
 GET http://localhost:3000/products
